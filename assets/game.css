@@ -1,0 +1,35 @@
+body {
+background-image: url(giphy.gif);
+
+background-size: center;
+}
+
+#stars {
+  width: 100%;
+  height: 78vh;
+}
+
+
+#health-readout {
+  position: absolute;
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% {  transform: rotate(359deg); }
+}
+#starship {
+  animation: spin 1s linear infinite;
+  padding-top: 1%;
+  padding-left: 1%;
+  height: 15vh;
+  width: auto;
+
+}
+
+
+/* @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% {  transform: rotate(359deg); }
+} */
