@@ -21,15 +21,18 @@ background-size: center;
 }
 #starship {
   animation: spin 1s linear infinite;
-  padding-top: 1%;
-  padding-left: 1%;
-  height: 15vh;
+  padding-top: 0%;
+  height: 10vh;
   width: auto;
 
 }
-
-
 /* @keyframes spin {
   0% { transform: rotate(0deg); }
   100% {  transform: rotate(359deg); }
 } */
+
+
+.lazer-btn-txt {
+   text-shadow: 0px 0px 20px #26ff00,0px 0px 20px #26ff00,0px 0px 20px #26ff00;
+  color: #ffae00;
+}
