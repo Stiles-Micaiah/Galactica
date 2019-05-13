@@ -1,5 +1,7 @@
 var modifier = 10
 
+var weaponButtons = document.getElementsByClassName('weapon')
+
 var health = 100
 
 var playerHealth = 100
@@ -41,6 +43,12 @@ function reset() {
   modifier = 10
   winCount = 0
   health = 100
+playerHealth=100
+for (let i = 0; i < weaponButtons.length; i++) {
+  const button = weaponButtons[i];
+  button.setAttribute('disabled', true)
+}
+document.getElementsByName('disabled', false)
   drawPage()
 
 }
@@ -49,7 +57,7 @@ function drawPage() {
 
   if (health < 0) {
     health = 0
-    document.getElementsByClassName("weapon").disabled
+    document.getElementsByClassName("weapon")
 
   }
   if (playerHealth < 0) {
