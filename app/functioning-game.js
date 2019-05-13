@@ -33,7 +33,13 @@ function whenPressedK() {
   // alert(health.toLocaleString)
   drawPage()
 }
+function reset() {
+  modifier = 10
+  winCount = 0
+  health = 100
+  drawPage()
 
+}
 
 function drawPage() {
 
