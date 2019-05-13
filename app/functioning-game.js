@@ -2,16 +2,16 @@ var modifier = 10
 
 var health = 100
 
-var playerHealth = 100
+var playerHealth = 23
 
 var winCount = 0
-
+drawPage()
 
 document.getElementById("healthLvl").innerText = health
 
 
 function whenPressedM() {
-  health--
+  health -= 1
   // alert(health.toLocaleString)
   drawPage()
 }
@@ -43,10 +43,26 @@ function reset() {
 
 function drawPage() {
 
+  if (health < 0) {
+    health = 0
+    document.getElementsByClassName("weapon").set
 
+  }
+  if (playerHealth < 0) {
+    playerHealth = 0
+  }
+
+  // if (health = 0) {
+  // document.getElementById("healthLvl").innerText = "You won"
+  // } // else {
+  //   document.getElementsByClassName("weapon=").disabled = false
+
+  // }
 
   document.getElementById("healthLvl").innerText = health
 
   document.getElementsByClassName("progress-bar")[0].setAttribute("style", `width: ${health}%`)
+
+  document.getElementsByClassName("progress-bar")[1].setAttribute("style", `width: ${playerHealth}%`)
 
 }
