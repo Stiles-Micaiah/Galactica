@@ -2,13 +2,14 @@ var modifier = 10
 
 var health = 100
 
-var playerHealth = 23
+var playerHealth = 100
 
 var winCount = 0
 drawPage()
 
 document.getElementById("healthLvl").innerText = health
 
+setInterval(playerHealth-- , 500);
 
 function whenPressedM() {
   health -= 1
@@ -60,6 +61,9 @@ function drawPage() {
   // }
 
   document.getElementById("healthLvl").innerText = health
+
+  document.getElementById("player-health-readout").innerText = playerHealth
+
 
   document.getElementsByClassName("progress-bar")[0].setAttribute("style", `width: ${health}%`)
 
