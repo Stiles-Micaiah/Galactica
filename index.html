@@ -10,7 +10,7 @@
   <title>Slap</title>
 </head>
 
-<body>
+<body id ="HTML-body">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="#">Micaiah</a>
@@ -59,19 +59,19 @@
           <ul>
             <li>
               <button id="weapon01" class="btn btn-primary float-left btn-md weapon rounded-pill"
-                onclick="whenPressedM()"><b class="lazer-btn-txt">Lazer</b></button>
+                onclick="whenPressed('lazer')"><b class="lazer-btn-txt">Lazer</b></button>
             </li>
             <li>
               <button id="weapon02" disabled class="btn btn-primary float-left btn-md weapon rounded-pill"
-                onclick="whenPressedI()"><b class="Wave-btn-txt">Wave</b></button>
+                onclick="whenPressed('wave')"><b class="Wave-btn-txt">Wave</b></button>
             </li>
             <li>
               <button id="weapon03" disabled class="btn btn-primary float-left btn-md weapon rounded-pill"
-                onclick="whenPressedC()"><b class="Plasma-btn-txt">Plasma</b></button>
+                onclick="whenPressed('plasma')"><b class="Plasma-btn-txt">Plasma</b></button>
             </li>
             <li>
               <button id="weapon04" class="btn btn-primary float-left btn-md weapon rounded-pill"
-                onclick="whenPressedK()"><b class="Phazon-btn-txt">Phazon</b></button>
+                onclick="whenPressed('phazon')"><b class="Phazon-btn-txt">Phazon</b></button>
             </li>
             <li>
               <button id="reset" class="btn btn-primary float-left btn-md rounded-pill" onclick="reset()"><b
@@ -112,15 +112,14 @@
     <div class="row">
       <div id="player-col" class="col-2 d-flex justify-content-center">
 
-        <img class="" id=starship src="assets\96-963141_http-pinterest-app-android-2d-game-spaceship-png.png">
+        <img class="" id=starship src="assets\playerOne.png">
         </img>
       </div>
   
     </footer>
 
 
-
-
+<span id= "winWin"></span>
     
     <h1><b>Health:<span id= "player-health-readout"></span>%</b></h1>
     <div class="progress">
