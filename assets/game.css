@@ -52,7 +52,18 @@ background-size: center;
   text-shadow: 0px 0px 20px #26ff00,0px 0px 20px #26ff00,0px 0px 20px #26ff00;
   color: #ffae00;
 }
-
+.Wave-btn-txt {
+  text-shadow: 0px 0px 20px #ff00ea,0px 0px 20px #ff00ea,0px 0px 20px #ff00aa;
+  color: #ae00ff;
+}
+.Plasma-btn-txt {
+  text-shadow: 0px 0px 20px #b40505,0px 0px 20px #b40505,0px 0px 20px #b40505;
+  color: #ff0000;
+}
+.Phazon-btn-txt {
+  text-shadow: 0px 0px 20px #00aeff,0px 0px 20px #00aeff,0px 0px 20px #00aeff;
+  color: #0051ff;
+}
 .reset-btn-txt {
   text-shadow: 0px 0px 20px #fffb00,0px 0px 20px #fffb00,0px 0px 20px #fffb00;
   color: #0059ff;

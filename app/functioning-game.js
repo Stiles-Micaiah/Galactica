@@ -9,7 +9,10 @@ drawPage()
 
 document.getElementById("healthLvl").innerText = health
 
-setInterval(playerHealth-- , 500);
+setInterval(() => {
+  playerHealth --
+}
+, 500)
 
 function whenPressedM() {
   health -= 1
@@ -46,7 +49,7 @@ function drawPage() {
 
   if (health < 0) {
     health = 0
-    document.getElementsByClassName("weapon").set
+    document.getElementsByClassName("weapon").disabled
 
   }
   if (playerHealth < 0) {
