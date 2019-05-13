@@ -26,6 +26,22 @@ background-size: center;
   width: auto;
 
 }
+#player-col {
+  margin-left: 47vw;
+  margin-right: auto;
+
+
+}
+#enemyShip {
+  padding-top: 0%;
+  height: 10vh;
+  width: auto;
+
+}
+#enemy-col {
+  margin-left: auto;
+  margin-right: auto;
+}
 /* @keyframes spin {
   0% { transform: rotate(0deg); }
   100% {  transform: rotate(359deg); }
@@ -33,6 +49,26 @@ background-size: center;
 
 
 .lazer-btn-txt {
-   text-shadow: 0px 0px 20px #26ff00,0px 0px 20px #26ff00,0px 0px 20px #26ff00;
+  text-shadow: 0px 0px 20px #26ff00,0px 0px 20px #26ff00,0px 0px 20px #26ff00;
   color: #ffae00;
+}
+
+#attack-ul>ul  {
+    /* float: left; */
+    list-style: none;
+    margin-left: -4rem;
+    margin-top: 24vh;
+
+}
+#attack-ul>ul>li {
+padding-bottom: 4rem;
+}
+
+
+
+#ghj {
+margin-left: auto;
+margin-right: auto;
+
+
 }
