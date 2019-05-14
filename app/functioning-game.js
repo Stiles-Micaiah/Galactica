@@ -9,13 +9,45 @@ class enemy {
       phazon: phazonDamage
     }
     this.fileName = fileName
+    this.bonus = {
+      ice: .08,
+      powerBeam: .30,
+      phazonInfusion: .89
+    }
+  }
+
+  calcMods() {
+    let mod = 1
+    for(let prop in diffusion) {
+      if (diffusion[prop]) {
+        mod += this.bonus[prop]
+      }
+    }
+    return mod
   }
 
   fire(type) {
-    this.health -= this.attacks[type]
+      this.health -= this.attacks[type] * this.calcMods()
+
+    drawPage()
   }
 }
 
+var diffusion = {
+  ice: false,
+  powerBeam: false,
+  phazonInfusion: false
+}
+
+function modPressed(modifier) {
+  // if (diffusion[modifier]) {
+  //   diffusion[modifier] = false
+  // } else {
+  //   diffusion[modifier] = true
+    
+  // }
+  diffusion[modifier] = !diffusion[modifier]
+}
 
 class player {
   constructor(name, health, fileName, GalvanicAcceleratorCannonDamage, QuantumAssultCannonDamage) {
@@ -34,7 +66,12 @@ var enemySecond = new enemy('enemy02', 500, 'assets/enemy1.png', 15, 27, 30, 78)
 
 var playerOne = new player('P1', 100, 'assets/playerOne.png', 5, 15)
 
+var weaponButtons = document.getElementsByClassName('weapon')
+var videoLoaded = false
+
 var playerTwo = new player('P2', 300, '', 4, 13)
+//   modifier = 10
+//   winCount = 0
 
 var enemyCollection = [
   enemyFirst,
@@ -46,32 +83,14 @@ var playerCollection = [
   playerTwo
 ]
 
-// var modifier = 10
-
-var weaponButtons = document.getElementsByClassName('weapon')
-
-// var winCount = 0
 drawPage()
-
-//////////////////// document.getElementById("healthLvl").innerText = health
 
 let enemyAttackses = setInterval(() => {
   playerCollection[0].health -= 7
   drawPage()
-}
-  , 3000)
+}, 3000)
 
-function whenPressed(type) {
-  enemyCollection[0].fire(type)
-  // alert(health.toLocaleString)
-  drawPage()
-}
 function reset() {
-
-  //   modifier = 10
-
-  //   winCount = 0
-
   enemyCollection[0].health = 100
 
   playerCollection[0].health = 100
@@ -104,19 +123,22 @@ function drawPage() {
   }
   if (playerCollection[0].health < 0) {
     playerCollection[0].health = 0
-  
-    clearInterval(enemyAttackses)}
-  ////////////////////////////////////////////////
+
+    clearInterval(enemyAttackses)
+  }
+  //////////////////////////////////////////////////Broken if-statement that breaks everything. STAY AWAY!!!!////////////////////////////////////
+
   // if (health = 0) {
   // document.getElementById("healthLvl").innerText = "You won"
   // } // else {
   //   document.getElementsByClassName("weapon=").disabled = false
   // }
-  // Broken if-statement that breaks everything. STAY AWAY!!!!
+
   ///////////////////////////////////////////////////////////////////
 
-  if (playerCollection[0].health < 1) {
-    document.body.innerHTML = `<video src= "assets/Died.mp4" style= "width: 100%; height: auto;" autoplay ></video>`
+  if (playerCollection[0].health < 1 && !videoLoaded) {
+    document.body.innerHTML = `<video src= "assets/gameOver.mp4" style= "width: 100%; height: auto;" autoplay ></video>`
+    videoLoaded = !videoLoaded
   } else {
 
     document.getElementById("healthLvl").innerText = enemyCollection[0].health
@@ -134,3 +156,18 @@ function drawPage() {
   }
 }
 
+
+
+
+////////////////////////////////////////////////////Button Function has been replaced////////////////////////////////////////////// 
+
+// function whenPressed(type) {
+//   enemyCollection[0].fire(type)
+//   // alert(health.toLocaleString)
+//   drawPage()
+// }
+
+///////////////////////////////////////////////////////Diffusion button reference///////////////////////////////////////////////
+
+// <button id="diffusionWeaponry" class="btn btn-primary float-left btn-md weaponryMod rounded-pill"
+//                 onclick="whenPressed('lazer')"><b class="lazer-btn-txt">Diffusion</b></button>

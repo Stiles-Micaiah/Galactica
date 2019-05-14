@@ -65,8 +65,24 @@ background-size: center;
   color: #0051ff;
 }
 .reset-btn-txt {
-  text-shadow: 0px 0px 20px #fffb00,0px 0px 20px #fffb00,0px 0px 20px #fffb00;
-  color: #0059ff;
+  text-shadow: 0px 0px 15px #fffb00,0px 0px 15px #fffb00,0px 0px 15px #fffb00;
+  color: #5991f8;
+}
+#diffusion-btn {
+    text-shadow: 0px 0px 20px #ff00aa,0px 0px 20px #ffee00,0px 0px 20px #3700ff;
+  color: #00ff22;
+}
+#iceDiffusion {
+  text-shadow: 0px 0px 20px #ffffff,0px 0px 20px #ffffff,0px 0px 20px #ffffff;
+  color: #446cb6;
+}
+#powerDiffusion {
+  text-shadow: 0px 0px 20px #ffe600,0px 0px 20px #8f8d0b,0px 0px 20px #fbff00;
+  color: #f33131;
+}
+#phazonInfusion {
+  text-shadow: 0px 0px 20px #00b7ff,0px 0px 20px #2600ff,0px 0px 20px #00aeff;
+  color: #4486ff;
 }
 
 
@@ -74,13 +90,19 @@ background-size: center;
     /* float: left; */
     list-style: none;
     margin-left: -4rem;
-    margin-top: 24vh;
+    margin-top: 18vh;
 
 }
 #attack-ul>ul>li {
-padding-bottom: 4rem;
+  padding-bottom: 4rem;
 }
-
+#li-needed {
+margin-top: 4vh;
+}
+#diffusion-dropdown {
+  color: #0051ff;
+  background-color: #2f718100
+}
 
 
 

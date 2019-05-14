@@ -10,7 +10,7 @@
   <title>Slap</title>
 </head>
 
-<body id ="HTML-body">
+<body id="HTML-body">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="#">Micaiah</a>
@@ -58,23 +58,32 @@
         <section id="attack-ul">
           <ul>
             <li>
-              <button id="weapon01" class="btn btn-primary float-left btn-md weapon rounded-pill"
-                onclick="whenPressed('lazer')"><b class="lazer-btn-txt">Lazer</b></button>
+              <button id="weapon01"  class="btn btn-primary float-left btn-md weapon rounded-pill"
+                onclick="enemyCollection[0].fire('plasma')"><b class="Plasma-btn-txt">Plasma</b></button>
             </li>
             <li>
-              <button id="weapon02" disabled class="btn btn-primary float-left btn-md weapon rounded-pill"
-                onclick="whenPressed('wave')"><b class="Wave-btn-txt">Wave</b></button>
+              <button id="weapon02"  class="btn btn-primary float-left btn-md weapon rounded-pill"
+                onclick="enemyCollection[0].fire('wave')"><b class="Wave-btn-txt">Wave</b></button>
             </li>
             <li>
-              <button id="weapon03" disabled class="btn btn-primary float-left btn-md weapon rounded-pill"
-                onclick="whenPressed('plasma')"><b class="Plasma-btn-txt">Plasma</b></button>
+              <button id="weapon03" class="btn btn-primary float-left btn-md weapon rounded-pill"
+                onclick="enemyCollection[0].fire('phazon')"><b class="Phazon-btn-txt">Phazon</b></button>
             </li>
-            <li>
-              <button id="weapon04" class="btn btn-primary float-left btn-md weapon rounded-pill"
-                onclick="whenPressed('phazon')"><b class="Phazon-btn-txt">Phazon</b></button>
+            <li class="btn-group">
+              <button id= "diffusion" type="button" class="btn btn-primary rounded-pill dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false"><b id= "diffusion-btn">
+                Diffusion
+                </b>
+              </button>
+              <div id="diffusion-dropdown" class="dropdown-menu">
+                <button onclick="modPressed('ice')" class="dropdown-item dropdown-item-primary"><b id="iceDiffusion">+Ice</b></button>
+                <button onclick="modPressed('powerBeam')" class="dropdown-item"><b id="powerDiffusion">+Power Beam</b></button>
+                <button onclick="modPressed('phazonInfusion')" class="dropdown-item"><b id="phazonInfusion">+Phazon
+                    Infusion</b></button>
+              </div>
             </li>
-            <li>
-              <button id="reset" class="btn btn-primary float-left btn-md rounded-pill" onclick="reset()"><b
+            <li id="li-needed">
+              <button id="reset" class="btn btn-primary float-left btn-sm rounded-pill" onclick="reset()"><b
                   class="reset-btn-txt">Time Crystal</b></button>
             </li>
           </ul>
@@ -108,21 +117,21 @@
   <footer class="container-fluid">
 
 
-    
+
     <div class="row">
       <div id="player-col" class="col-2 d-flex justify-content-center">
 
         <img class="" id=starship src="assets\playerOne.png">
         </img>
       </div>
-  
-    </footer>
+
+  </footer>
 
 
-<span id= "winWin"></span>
-    
-    <h1><b>Health:<span id= "player-health-readout"></span>%</b></h1>
-    <div class="progress">
+  <span id="winWin"></span>
+
+  <h1><b>Health:<span id="player-health-readout"></span>%</b></h1>
+  <div class="progress">
     <div id="player-health" class="progress-bar bg-info progress-bar-striped progress-bar-animated " role="progressbar"
       aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
   </div>
